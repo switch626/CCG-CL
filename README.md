@@ -2,6 +2,10 @@
 
 Code of ICASSP 2024 paper: "A METHOD FOR X-RAY IMAGE LANDMARKS LOCALIZATION USING CYCLIC COORDINATE-GUIDED STRATEGY".
 
+## TO-DO LIST
+- [ ] Release CCG model.
+- [ ] Share feature extraction model for all landmarks using GNN.
+
 ## Installation
 
 1.  Clone this repository.
