@@ -4,9 +4,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-class global_model(nn.Module):
+class global_module(nn.Module):
     def __init__(self, input_channels=256, output_channels=512):
-        super(global_model, self).__init__()
+        super(global_module, self).__init__()
 
         self.expand = nn.Linear(input_channels, output_channels)
       
