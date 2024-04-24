@@ -209,7 +209,7 @@ def test(settings, landmarks,fold=3, num_folds =4, fold_size=100, avg_labels=Tru
 
     models = []
     for setting in settings:
-        model = m.PyramidAttention(levels)
+        model = m.Cyclic_Coordinate_Guided(levels)
         model.load_state_dict(torch.load(setting['loadpath']))
         models.append(model)
         model.to(device)
@@ -352,8 +352,6 @@ if __name__ == '__main__':
             np.savez(f, all_folds_errors2)
         print('Time cost: {:.2f}s'.format(time()-rt))
         print()
-        print(avg1)
-        print(avg2)
 
 
 
