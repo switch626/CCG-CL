@@ -31,7 +31,7 @@ IMG_TRANSFORM_PADDING = {'width': IMG_SIZE_ROUNDED_TO_64['width'] - IMG_SIZE_ORI
                         'height': IMG_SIZE_ROUNDED_TO_64['height']- IMG_SIZE_ORIGINAL['height']}
 
 
- 02.  define functions
+# 02.  define functions
 def Calculate_Flops_Params(size, poes, model):
     x = size
     rate = 1 
