@@ -4,7 +4,7 @@ import sys
 import copy
 import random
 import XrayData19 as XrayData
-from pyramid import pyramid, stack, pyramid_transform
+from model.pyramid import pyramid, stack, pyramid_transform
 
 import torch
 import torch.nn as nn
@@ -294,7 +294,6 @@ def test(settings, landmarks,fold=3, num_folds =4, fold_size=100, avg_labels=Tru
 
 
 if __name__ == '__main__':
-    
     Training = True
     Training = False
     Testing = True
