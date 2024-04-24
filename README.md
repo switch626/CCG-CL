@@ -2,10 +2,6 @@
 
 Code of ICASSP 2024 paper: "A METHOD FOR X-RAY IMAGE LANDMARKS LOCALIZATION USING CYCLIC COORDINATE-GUIDED STRATEGY".
 
-## TO-DO LIST
-- [ ] Release CCG model.
-- [ ] Share feature extraction model for all landmarks using GNN.
-
 ## Installation
 
 1.  Clone this repository.
@@ -26,3 +22,14 @@ conda activate ccgcl
 ```Shell
 pip install -r requirements.txt
 ```
+
+4. Prepare the ISBI dataset or the Hand900 dataset.
+
+5. Train and Test the model.
+
+```Shell
+python train.py
+```
+
+## Acknowledgments
+Great thanks for these papers and their open-source codes：[FoveatedPyramid](https://github.com/logangilmour/FoveatedPyramid), [Maxim](https://github.com/google-research/maxim).
