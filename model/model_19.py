@@ -1,7 +1,7 @@
 # 1. Load packages
 import os
 import torch
-import model.pyramid
+import model.pyramid as pyramid
 import torch.nn as nn
 import matplotlib.pyplot as plt
 import torch.nn.functional as F
