@@ -311,7 +311,7 @@ if __name__ == '__main__':
     land_list = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
     if Training:
         errors.append(
-            train(modelname, land_list, batched=True, fold=4, num_folds=5, fold_size=30, iterations=6, avg_labels=True, rms= True))
+            train(modelname, land_list, batched=True, fold=4, num_folds=5, fold_size=30, iterations=10, avg_labels=True, rms= True))
         print('errors: ', errors)
 
     if Testing:
