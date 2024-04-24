@@ -48,7 +48,7 @@ def rescale_point_to_original_size(point):
     middle = np.array([IMG_SIZE_ROUNDED_TO_64['width'], IMG_SIZE_ROUNDED_TO_64['height']]) / 2
     return ((point*IMG_SIZE_ROUNDED_TO_64['width'])/2) + middle
 
-def train(name, landmarks, load=False, startEpoch=0, batched=False, fold=3, num_folds=4, fold_size=100, iterations=10, avg_labels=False,rms=False):
+def train(name, landmarks, load=False, startEpoch=0, batched=False, fold=3, num_folds=4, fold_size=100, iterations=6, avg_labels=False,rms=False):
 
     batchsize=2
     num_epochs=50
@@ -203,7 +203,7 @@ def test(settings, landmarks,fold=3, num_folds =4, fold_size=100, avg_labels=Tru
     stddevs = torch.tensor(pnts.std(0,keepdims=True),device=device,dtype=torch.float32)
 
     levels = 6
-    iterations = 8
+    iterations = 6
 
     output_count=len(landmarks)
 
@@ -311,7 +311,7 @@ if __name__ == '__main__':
     land_list = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
     if Training:
         errors.append(
-            train(modelname, land_list, batched=True, fold=4, num_folds=5, fold_size=30, iterations=10, avg_labels=True, rms= True))
+            train(modelname, land_list, batched=True, fold=4, num_folds=5, fold_size=30, iterations=6, avg_labels=True, rms= True))
         print('errors: ', errors)
 
     if Testing:
